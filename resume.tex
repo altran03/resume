@@ -1,0 +1,197 @@
+%-------------------------
+% Resume in Latex
+% Author : Alvin Tran
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Alvin Tran} \\ \vspace{1pt}
+    \small San Francisco, CA $|$ (415) 629-0992 $|$ \href{mailto:alvin.tran127@gmail.com}{\underline{alvin.tran127@gmail.com}} $|$ 
+    \href{https://github.com/altran03}{\underline{github.com/altran03}} $|$
+    \href{https://linkedin.com/in/tralvin}{\underline{linkedin.com/in/tralvin}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {San Jose State University}{San Jose, CA}
+      {BS Computer Science $|$ GPA: 4.0}{Expected Graduation Fall 2027}
+    \resumeSubheading
+      {Lowell High School}{San Francisco, CA}
+      {GPA: 4.35}{Aug 2020 -- Jun 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {SJSU Software and Computer Engineering Society}{Jun 2025 -- Present}
+      {Software Engineer Intern}{San Francisco, CA}
+      \resumeItemListStart
+        \resumeItem{Optimized React.js web application performance by removing outdated dependencies (framer-motion, lodash, axios), implementing modern JavaScript APIs, and compressing assets, achieving a 20\% reduction in bundle size}
+        \resumeItem{Migrated legacy promise-based API calls to modern async/await patterns using native fetch API, improving code maintainability and eliminating unnecessary third-party dependencies}
+        \resumeItem{Collaborated with development team to resolve merge conflicts and implement file compression features using pdf-lib and pako libraries for enhanced data transfer efficiency}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Rapid Relief AI} $|$ \emph{FastAPI, Next.js, WebSockets, VAPI}}{Humane Tech 2025 Grand Prize Winner}
+          \resumeItemListStart
+            \resumeItem{Architected and deployed a full-stack real-time call transcription platform using FastAPI backend and Next.js frontend}
+            \resumeItem{Engineered interactive dashboard with live transcript visualization and analytics through WebSocket integration, enabling real-time data processing and user engagement}
+            \resumeItem{Implemented VAPI webhook integration for seamless audio stream ingestion, optimizing call processing workflow and reducing latency for immediate transcript delivery}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Budgie} $|$ \emph{React, Supabase, Google Cloud Vision API, Vercel, Anthropic API}}{Berkeley AI Hackathon 2025}
+          \resumeItemListStart
+            \resumeItem{Built an intelligent budgeting application with automated expense tracking, leveraging Google Cloud Vision API for OCR-based receipt processing and Anthropic API for natural language understanding to eliminate manual data entry}
+            \resumeItem{Engineered interactive React dashboards providing real-time budget visualization and category-based spending analytics, delivering intuitive financial insights to users}
+            \resumeItem{Implemented secure user authentication and scalable cloud storage using Supabase, ensuring persistent data management and seamless cross-device synchronization}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Stock Data Fetcher} $|$ \emph{React, JavaScript, Finnhub API}}{}
+          \resumeItemListStart
+            \resumeItem{Built a stock tracker web app that fetches real-time data using the Finnhub API based on user input}
+            \resumeItem{Implemented auto-refresh with customizable time intervals and pause/continue controls using React Hooks}
+            \resumeItem{Validated inputs and displayed data in a dynamic table, changing with each fetch}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------ACTIVITIES-----------
+\section{Activities}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lowell Vietnamese Student Association}{2021 -- 2024}
+      {Secretary}{San Francisco, CA}
+      \resumeItemListStart
+        \resumeItem{Facilitated in-person meeting activities for 20+ students per meeting}
+        \resumeItem{Managed emailing list, writing ~20 emails a school year, and managing Google forms}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, JavaScript, TypeScript, HTML, CSS} \\
+     \textbf{Frameworks \& APIs}{: React, Next.js, Node.js, FastAPI, ElevenLabs, VAPI, Anthropic} \\
+     \textbf{Databases \& Auth}{: Supabase, MongoDB, Auth0}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
